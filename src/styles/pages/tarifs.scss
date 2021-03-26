@@ -1,0 +1,76 @@
+.screen-tarifs {
+  &__container {
+    background: $background-blue-2;
+  }
+
+  &__top {
+    padding: 90px 120px 120px;
+    border-bottom: 1px solid $white-low;
+
+    h2 {
+      flex: 1;
+    }
+
+    .specialist {
+      flex: 1;
+      padding-left: 90px;
+
+      &__img {
+        border: 1px solid $white-low;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-right: 30px;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      &__text {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .tarif {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__wrapper {
+      border-right: 1px solid $white-low;
+      padding: 130px 120px 90px;
+    }
+    
+    &:last-child {
+      border-right: none;
+    }
+
+    &__header {
+      margin-bottom: 15px;
+      h3 {
+        margin-right: 25px;
+      }
+    }
+
+    &__sub-header {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    &__cost {
+      font-size: 23px;
+      font-weight: 400;
+      &--number {
+        font-weight: 500;
+        font-size: 24px;
+      }
+    }
+
+    .btn {
+      margin-top: auto;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.screen-main {
+  height: 100vh;
+  text-align: center;
+
+  &--background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: url('../images/background-1.png') no-repeat;
+    background-size: cover;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: rgba(14, 25, 41, 0.8);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    white-space: nowrap;
+    padding-right: 60px;
+
+    &--city {
+      font-size: 13px;
+      margin-right: 32px;
+    }
+
+    &--phone {
+      font-size: 19px;
+
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+
+    .text-pinyon {
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      margin-bottom: 60px;
+    }
+  }
+
+  .btn-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(calc(-50% + 0.5px), -50%);
+  }
+}

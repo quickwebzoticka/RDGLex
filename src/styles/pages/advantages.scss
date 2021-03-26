@@ -1,0 +1,44 @@
+.screen-advantages {
+  &__container {
+    padding: 130px 120px 120px;
+    background: $background-blue-1;
+  }
+
+  &__row {
+    margin-bottom: 100px;
+    .col {
+      padding-left: 90px;
+    }
+
+    .col:first-child {
+      padding-left: 0px;
+    }
+  }
+
+  .advantages {
+    display: flex;
+    align-items: flex-start;
+
+    &-item {
+      width: 230px;
+      margin-right: 150px;
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      &__icon {
+        margin-bottom: 40px;
+      }
+
+      &__text {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      &__subtext {
+        font-size: 17px;
+        line-height: 28px;
+      }
+    }
+  }
+}

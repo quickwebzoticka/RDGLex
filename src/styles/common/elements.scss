@@ -1,0 +1,206 @@
+body {
+  color: $white-text;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  background: $background-blue-deep;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.p-l {
+  padding-left: 90px;
+}
+
+.sub-h {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.section {
+  position: relative;
+}
+
+.col {
+  flex: 1 50%;
+  width: 50%;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding-left: $nav-width;
+}
+
+.line-center {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 0.5px;
+    background: $white-low;
+  }
+}
+
+.text-gold {
+  color: $gold;
+}
+
+.text-sub {
+  color: $white-subtext;
+}
+
+.text-number {
+  font-size: 70px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+.phone {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
+
+.text-pinyon {
+  font-family: 'PinyonScript', sans-serif;
+  font-size: 36px;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border: 1px solid $white-low;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--big {
+    height: 84px;
+    width: 84px;
+  }
+}
+
+.btn {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 20px 40px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+
+  &-gold {
+    background-color: $gold;
+  }
+
+  &-regular {
+    background-color: transparent;
+    border: 1px solid $white-low;
+    border-top: 1px solid $gold;
+    color: $white-text;
+  }
+}
+
+.question {
+  background: $background-blue-3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.swipers-arrows {
+  display: flex;
+  align-items: center;
+  
+  &__item {
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__left {
+    transform: rotate(90deg)
+  }
+
+  &__right {
+    transform: rotate(-90deg)
+  }
+}
+
+.tag {
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: $gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $white-low;
+  font-size: 17px;
+  font-weight: 400;
+}

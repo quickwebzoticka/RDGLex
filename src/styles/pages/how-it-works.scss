@@ -1,0 +1,36 @@
+.screen-how-it-works {
+  &__container {
+    padding: 115px 120px 160px;
+    background-color: $background-blue-3;
+  }
+
+  h2 {
+    margin-bottom: 100px;
+  }
+
+  .steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .step {
+    &__number {
+      position: relative;
+      margin-bottom: 30px;
+
+      &--arrow {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+    }
+
+    &__text {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+  }
+}

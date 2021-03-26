@@ -1,0 +1,38 @@
+.side {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: $nav-width;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 0 50px 40px;
+  border-right: 1px solid $white-low;
+
+  &__bottom {
+    font-size: 16px;
+  }
+}
+
+.nav {
+  &__link {
+    height: 53px;
+    display: flex;
+    align-items: center;
+    color: $white-subtext;
+    font-size: 17px;
+    transition: .3s;
+
+    &.active {
+      color: $white-text;
+      border-right: 1px solid $gold;
+    }
+
+    &:hover {
+      color: $white-text;
+    }
+  }
+}
