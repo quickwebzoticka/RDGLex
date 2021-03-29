@@ -1,7 +1,12 @@
 .callback {
+  text-align: center;
   &__container {
     padding: 110px 120px 145px;
     position: relative;
+
+    @include w1440 {
+      padding: 60px;
+    }
 
     &--main {
       position: relative;
@@ -10,12 +15,24 @@
 
       .text-pinyon {
         margin-bottom: 40px;
+        @include w1440 {
+          margin-bottom: 20px;
+        }
       }
   
       .h1 {
         font-size: 70px;
         font-weight: 500;
         margin-bottom: 60px;
+
+        @include w1440 {
+          font-size: 60px;
+          margin-bottom: 30px;
+        }
+
+        @include w1024 {
+          font-size: 32px;
+        }
       }
     }
 
@@ -26,7 +43,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url('../images/background-callback.png') no-repeat;
+      background: url('../images/background-callback.png') no-repeat center center;
       background-size: cover;
 
       &::after {

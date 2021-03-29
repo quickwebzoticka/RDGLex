@@ -14,10 +14,30 @@
 
   &__bottom {
     font-size: 16px;
+    @include w1024 {
+      display: none;
+    }
+  }
+
+  @include w1024 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border: none;
   }
 }
 
 .nav {
+  @include w1024 {
+    display: none;
+  }
   &__link {
     height: 53px;
     display: flex;
@@ -33,6 +53,35 @@
 
     &:hover {
       color: $white-text;
+    }
+  }
+
+  &-mobile {
+    &-burger {
+      display: none;
+      cursor: pointer;
+
+      @include w1024 {
+        display: block;
+      }
+
+      .nav-mobile-burger__arrow {
+        display: none;
+      }
+
+      .nav-mobile-burger__lines {
+        display: block;
+      }
+
+      &.active {
+        .nav-mobile-burger__arrow {
+          display: block;
+        }
+
+        .nav-mobile-burger__lines {
+          display: none;
+        }
+      }
     }
   }
 }

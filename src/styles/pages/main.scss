@@ -9,7 +9,7 @@
     right: 0;
     bottom: 0;
     z-index: 1;
-    background: url('../images/background-1.png') no-repeat;
+    background: url('../images/background-1.png') no-repeat center center;
     background-size: cover;
 
     &::after {
@@ -36,6 +36,10 @@
     white-space: nowrap;
     padding-right: 60px;
 
+    @include w1024 {
+      display: none;
+    }
+
     &--city {
       font-size: 13px;
       margin-right: 32px;
@@ -43,7 +47,6 @@
 
     &--phone {
       font-size: 19px;
-
     }
   }
 
@@ -56,10 +59,22 @@
 
     .text-pinyon {
       margin-bottom: 40px;
+
+      @include w1440 {
+        margin-bottom: 20px;
+      }
+
+      @include w1024 {
+        margin-bottom: 5px;
+      }
     }
 
     h1 {
       margin-bottom: 60px;
+
+      @include w1440 {
+        margin-bottom: 30px;
+      }
     }
   }
 

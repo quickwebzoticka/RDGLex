@@ -2,15 +2,47 @@
   &__container {
     background: $background-blue-1;
     padding: 115px 120px 120px;
+
+    @include w1440 {
+      padding: 60px;
+    }
+
+    @include w1024 {
+      padding: 30px;
+    }
   }
 
   &__top {
     justify-content: space-between;
     margin-bottom: 115px;
+
+    @include w1440 {
+      margin-bottom: 50px;
+    }
+
+    @include w1024 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    @include w480 {
+      justify-content: center;
+    }
   }
 
   .swiper-wrapper {
     margin-bottom: 100px;
+
+    @include w1440 {
+      margin-bottom: 50px;
+    }
+  }
+
+  .swiper-pagination {
+    @include w480 {
+      display: none;
+    }
   }
 }
 
@@ -40,6 +72,10 @@
       margin-bottom: 30px;
       position: relative;
       overflow: hidden;
+
+      @include w1440 {
+        margin-bottom: 15px;
+      }
 
       &:hover {
         .team-item__tags {
@@ -81,10 +117,21 @@
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 10px;
+
+    @include w1440 {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 5px;
+    }
   }
 
   &__text {
     font-size: 17px;
     line-height: 28px;
+
+    @include w1440 {
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 }

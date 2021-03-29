@@ -1,16 +1,46 @@
 .screen-partners {
   &__container {
-    background: $background-blue-1;
+    background: $background-blue-2;
     padding: 115px 120px 120px;
+
+    @include w1440 {
+      padding: 60px;
+    }
+
+    @include w1024 {
+      padding: 30px;
+    }
   }
 
   &__top {
     justify-content: space-between;
     margin-bottom: 115px;
+
+    @include w1440 {
+      margin-bottom: 50px;
+    }
+
+    @include w1024 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    @include w1024 {
+      justify-content: center;
+    }
   }
 
   .swiper-wrapper {
     margin-bottom: 100px;
+
+    @include w1440 {
+      margin-bottom: 50px;
+    }
+
+    @include w1024 {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -24,12 +54,21 @@
     font-size: 40px;
     font-weight: 600;
 
-    width: 442px;
+    padding: 60px;
     height: 260px;
+
+    @include w1440 {
+      padding: 30px;
+      height: 150px;
+    }
 
     border: 1px solid $white-low;
     opacity: 0.1;
     transition: .3s;
+
+    img {
+      max-width: 100%;
+    }
 
     &:hover {
       opacity: 1;

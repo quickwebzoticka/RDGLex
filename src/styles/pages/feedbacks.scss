@@ -2,11 +2,33 @@
   &__container {
     background: $background-blue-3;
     padding: 115px 120px 120px;
+
+    @include w1440 {
+      padding: 60px;
+    }
+
+    @include w1024 {
+      padding: 30px;
+    }
   }
 
   &__top {
     justify-content: space-between;
     margin-bottom: 115px;
+
+    @include w1440 {
+      margin-bottom: 50px;
+    }
+
+    @include w1024 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    @include w1024 {
+      justify-content: center;
+    }
   }
 }
 
@@ -24,6 +46,14 @@
     &--wrapper {
       flex: 0 1 120px;
       margin-right: 35px;
+
+      @include w1440 {
+        margin-right: 15px;
+      }
+
+      @include w1024 {
+        display: none;
+      }
     }
   }
 
@@ -32,20 +62,38 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    margin-bottom: 100px;
+
+    @include w1440 {
+      margin-bottom: 50px;
+    }
   }
 
   &__tag {
     margin-bottom: 20px;
+    @include w1440 {
+      margin-bottom: 10px;
+    }
   }
 
   &__name {
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 20px;
+
+    @include w1440 {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
     font-size: 17px;
     line-height: 28px;
+    @include w1440 {
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 }

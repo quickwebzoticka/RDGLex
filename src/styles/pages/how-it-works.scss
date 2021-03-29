@@ -2,28 +2,65 @@
   &__container {
     padding: 115px 120px 160px;
     background-color: $background-blue-3;
+
+    @include w1440 {
+      padding: 60px;
+    }
+
+    @include w1024 {
+      padding: 30px;
+    }
   }
 
   h2 {
     margin-bottom: 100px;
+
+    @include w1440 {
+      margin-bottom: 50px;
+    }
+
+    @include w1024 {
+      margin-bottom: 25px;
+    }
   }
 
   .steps {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @include w480 {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 
   .step {
+    margin-right: 20px;
+
+    @include w480 {
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
     &__number {
       position: relative;
       margin-bottom: 30px;
+
+      @include w1440 {
+        margin-bottom: 15px;
+      }
 
       &--arrow {
         position: absolute;
         top: 50%;
         right: 0;
         transform: translate(50%, -50%);
+        @include w1440 {
+          transform: translate(0%, -50%);
+        }
+        @include w480 {
+          display: none;
+        }
       }
     }
 
@@ -31,6 +68,15 @@
       font-size: 24px;
       font-weight: 400;
       margin-bottom: 15px;
+      @include w1024 {
+        font-size: 17px;
+      }
+
+      &-sub {
+        @include w1024 {
+          font-size: 15px;
+        }
+      }
     }
   }
 }

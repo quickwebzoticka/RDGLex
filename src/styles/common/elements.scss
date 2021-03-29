@@ -14,6 +14,14 @@ h1 {
   margin: 0;
   font-size: 70px;
   font-weight: 600;
+
+  @include w1440 {
+    font-size: 50px;
+  }
+
+  @include w1024 {
+    font-size: 32px;
+  }
 }
 
 h2 {
@@ -21,12 +29,28 @@ h2 {
   font-size: 60px;
   font-weight: 600;
   letter-spacing: 3px;
+
+  @include w1440 {
+    font-size: 40px;
+  }
+
+  @include w1024 {
+    font-size: 24px;
+  }
 }
 
 h3 {
   margin: 0;
   font-size: 40px;
   font-weight: 600;
+
+  @include w1440 {
+    font-size: 30px;
+  }
+
+  @include w1024 {
+    font-size: 20px;
+  }
 }
 
 .d-flex {
@@ -56,6 +80,14 @@ h3 {
 .sub-h {
   font-size: 30px;
   font-weight: 300;
+
+  @include w1024 {
+    font-size: 17px;
+  }
+
+  @include w480 {
+    margin-bottom: 10px;
+  }
 }
 
 .section {
@@ -65,6 +97,7 @@ h3 {
 .col {
   flex: 1 50%;
   width: 50%;
+  
 }
 
 .container {
@@ -72,6 +105,10 @@ h3 {
   z-index: 2;
   height: 100%;
   padding-left: $nav-width;
+
+  @include w1024 {
+    padding-left: 0;
+  }
 }
 
 .line-center {
@@ -101,6 +138,14 @@ h3 {
   font-size: 70px;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
+
+  @include w1440 {
+    font-size: 50px;
+  }
+
+  @include w1024 {
+    font-size: 40px;
+  }
 }
 
 .phone {
@@ -118,6 +163,10 @@ h3 {
 .text-pinyon {
   font-family: 'PinyonScript', sans-serif;
   font-size: 36px;
+
+  @include w1024 {
+    font-size: 17px;
+  }
 }
 
 .icon-wrapper {
@@ -133,6 +182,15 @@ h3 {
   &--big {
     height: 84px;
     width: 84px;
+
+    img {
+      max-width: 70%;
+    }
+
+    @include w1440 {
+      height: 50px;
+      width: 50px;
+    }
   }
 }
 
@@ -148,6 +206,12 @@ h3 {
   text-align: center;
   cursor: pointer;
 
+  @include w1024 {
+    font-size: 17px;
+    padding: 15px 25px;
+    height: 48px;
+  }
+
   &-gold {
     background-color: $gold;
   }
@@ -157,6 +221,19 @@ h3 {
     border: 1px solid $white-low;
     border-top: 1px solid $gold;
     color: $white-text;
+    white-space: nowrap;
+  }
+}
+
+.btn-wrapper--mobile {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  @include w480 {
+    display: block;
   }
 }
 
@@ -176,6 +253,10 @@ h3 {
 .swipers-arrows {
   display: flex;
   align-items: center;
+
+  @include w1024 {
+    display: none;
+  }
   
   &__item {
     margin-right: 15px;
@@ -203,4 +284,35 @@ h3 {
   border: 1px solid $white-low;
   font-size: 17px;
   font-weight: 400;
+
+  @include w1440 {
+    font-size: 13px;
+    padding: 5px 15px;
+  }
+}
+
+.swiper {
+  &-pagination {
+    position: static;
+
+    &-bullet {
+      width: 40px;
+      height: 2px;
+      margin-right: 10px;
+      background: $white-low;
+      border-radius: 1px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      &-active {
+        background: $gold;
+      }
+    }
+  }
+}
+
+.mob-none {
+  @include w480 {
+    display: none;
+  }
 }

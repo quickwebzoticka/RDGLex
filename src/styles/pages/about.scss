@@ -6,6 +6,25 @@
   &__main {
     z-index: 1;
     padding: 120px 0 0 0;
+
+    @include w1440 {
+      padding: 60px 0 0 0;
+    }
+
+    @include w1440 {
+      padding: 30px 0 0 0;
+    }
+
+    @include w480 {
+      flex-direction: column;
+      &:before {
+        display: none;
+      }
+      .col {
+        width: 100%;
+        flex: 1;
+      }
+    }
   }
 }
 
@@ -13,24 +32,52 @@
   &__main {
     padding: 0 70px 60px 120px;
 
+    @include w1440 {
+      padding: 0 30px 30px 60px;
+    }
+
+    @include w1024 {
+      padding: 0 30px 30px;
+    }
+
     h2 {
       margin-bottom: 40px;
+
+      @include w1440 {
+        margin-bottom: 20px;
+      }
     }
   }
 
   &__left {
     display: flex;
     flex-direction: column;
+
+    @include w480 {
+      margin-bottom: 20px;
+    }
   }
 
   &__right {
     padding: 0 130px 120px 90px;
+    @include w1440 {
+      padding: 0 60px 60px 30px;
+    }
+    @include w1024 {
+      padding: 0 30px 30px;
+    }
   }
 
   &__sub-text {
     font-size: 24px;
     line-height: 40px;
     margin-bottom: 45px;
+
+    @include w1440 {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
   }
 
   &__left--bottom-img {
@@ -50,6 +97,10 @@
     flex-direction: column;
     margin-bottom: 80px;
 
+    @include w1440 {
+      margin-bottom: 40px;
+    }
+
     &:last-child {
       margin-bottom: 0px;
     }
@@ -58,6 +109,11 @@
       position: relative;
       padding-bottom: 25px;
       margin-bottom: 30px;
+
+      @include w1440 {
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+      }
 
       &::after {
         content: '';
@@ -73,6 +129,11 @@
     &__text {
       font-size: 24px;
       line-height: 29.26px;
+
+      @include w1440 {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
   }
 }

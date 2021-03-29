@@ -7,6 +7,21 @@
     padding: 90px 120px 120px;
     border-bottom: 1px solid $white-low;
 
+    @include w1440 {
+      padding: 60px;
+    }
+
+    @include w1024 {
+      padding: 30px;
+    }
+
+    @include w480 {
+      .col {
+        flex: 1;
+        width: 100%;
+      }
+    }
+
     h2 {
       flex: 1;
     }
@@ -15,20 +30,52 @@
       flex: 1;
       padding-left: 90px;
 
+      @include w1440 {
+        padding-left: 60px;
+      }
+
+      @include w1024 {
+        padding-left: 30px;
+      }
+
+      &--mobile {
+        @include w480 {
+          display: none;
+        }
+      }
+
+      
+
       &__img {
         border: 1px solid $white-low;
         border-radius: 50%;
         width: 100px;
         height: 100px;
+        flex: 0 1 100px;
         margin-right: 30px;
+
+        @include w1440 {
+          font-size: 16px;
+          margin-right: 15px;
+        }
+
+        @include w1024 {
+          display: none;
+        }
 
         img {
           border-radius: 50%;
+          max-width: 100%;
         }
       }
 
       &__text {
         font-size: 24px;
+        flex: 1;
+
+        @include w1440 {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -39,9 +86,28 @@
     flex-direction: column;
     align-items: flex-start;
 
+    @include w1024 {
+      min-height: 190px;
+    }
+
     &__wrapper {
       border-right: 1px solid $white-low;
       padding: 130px 120px 90px;
+
+      @include w1440 {
+        padding: 60px;
+      }
+
+      @include w1024 {
+        padding: 30px;
+      }
+
+      @include w480 {
+        flex: 1;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid $white-low;
+      }
     }
     
     &:last-child {
@@ -58,6 +124,14 @@
     &__sub-header {
       font-size: 24px;
       margin-bottom: 20px;
+      
+      @include w1440 {
+        font-size: 16px;
+      }
+
+      @include w1024 {
+        margin-bottom: 10px;
+      }
     }
 
     &__cost {
@@ -72,5 +146,11 @@
     .btn {
       margin-top: auto;
     }
+  }
+}
+
+.tarifs {
+  @include w480 {
+    flex-direction: column;
   }
 }
