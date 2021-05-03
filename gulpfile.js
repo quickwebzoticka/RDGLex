@@ -1,8 +1,7 @@
 const gulp = require("gulp")
 const del = require("del")
 const browserSync = require("browser-sync").create()
-const imagemin = require("gulp-imagemin")
-const pngquant = require("imagemin-pngquant")
+const image = require("gulp-image")
 const cache = require("gulp-cache")
 const autoprefixer = require("gulp-autoprefixer")
 
@@ -80,17 +79,7 @@ function fonts() {
 function images() {
   return gulp
     .src(paths.images.src) // Берем все изображения из app
-    // .pipe(
-    //   cache(
-    //     imagemin({
-    //       // Сжимаем их с наилучшими настройками с учетом кеширования
-    //       interlaced: true,
-    //       progressive: true,
-    //       svgoPlugins: [{ removeViewBox: false }],
-    //       use: [pngquant()],
-    //     }),
-    //   ),
-    // )
+    .pipe(image())
     .pipe(gulp.dest(paths.images.dest)) // Выгружаем на продакшен
 }
 

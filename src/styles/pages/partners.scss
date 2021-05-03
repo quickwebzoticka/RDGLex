@@ -1,6 +1,6 @@
 .screen-partners {
   &__container {
-    background: $background-blue-2;
+    background: $background-blue-1;
     padding: 115px 120px 120px;
 
     @include w1440 {
@@ -45,6 +45,15 @@
 }
 
 .partners-item {
+  &__head {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  &__description {
+    font-size: 18px;
+    line-height: 24px;
+  }
   &__logo {
     display: flex;
     align-items: center;

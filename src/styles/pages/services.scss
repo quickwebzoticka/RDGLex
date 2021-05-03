@@ -33,14 +33,14 @@
   }
 
   &__request {
-    padding: 0 0 100px 120px;
+    padding: 0 20px 100px 120px;
     height: 550px;
     border-bottom: 1px solid $white-low;
     display: flex;
     flex-direction: column;
 
     @include w1440 {
-      padding: 0 0 50px 60px;
+      padding: 0 20px 50px 60px;
       height: 350px;
     }
 
@@ -54,6 +54,11 @@
 
     h2 {
       margin: 0 0 40px 0;
+      
+      @media (min-width: 1201px) {
+        font-size: 36px;
+        line-height: 50px;  
+      }
 
       @include w1440 {
         margin: 0 0 20px 0;

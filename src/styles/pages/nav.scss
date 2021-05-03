@@ -5,12 +5,24 @@
   left: 0;
   z-index: 10;
   width: $nav-width;
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-  justify-content: space-between;
+  
   padding: 60px 0 50px 40px;
   border-right: 1px solid $white-low;
+
+  &-mobile__top {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    @include w1024 {
+      width: 100%;
+      height: auto;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
 
   &__bottom {
     font-size: 16px;
@@ -24,13 +36,32 @@
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     height: 80px;
     padding: 20px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+    
     border: none;
+
+    &.active {
+      position: fixed;
+      height: 100vh;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+
+      background: $background-blue-3;
+      .nav-mobile-burger__arrow {
+        display: block;
+      }
+
+      .nav-mobile-burger__lines {
+        display: none;
+      }
+
+      .nav-mobile {
+        display: flex;
+      }
+    }
   }
 }
 
@@ -57,6 +88,36 @@
   }
 
   &-mobile {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    &__link {
+      font-size: 20px;
+
+      &.active {
+        color: $gold;
+      }
+    }
+
+    &__item {
+      padding: 20px 0;
+    }
+
     &-burger {
       display: none;
       cursor: pointer;
@@ -67,20 +128,11 @@
 
       .nav-mobile-burger__arrow {
         display: none;
+        transform: rotate(90deg);
       }
 
       .nav-mobile-burger__lines {
         display: block;
-      }
-
-      &.active {
-        .nav-mobile-burger__arrow {
-          display: block;
-        }
-
-        .nav-mobile-burger__lines {
-          display: none;
-        }
       }
     }
   }

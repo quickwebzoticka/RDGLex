@@ -5,46 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/app.min.css">
-    <title>Project</title>
+    <title>RDGLex</title>
   </head>
   <body>
     <div class="wrapper">
       <nav class="side">
-        <a href="#main" class="logo">
-          <img src="./images/logo.svg" alt="logo">
-        </a>
-        <ul class="nav">
-          <li class="nav__item">
-            <a href="#main" class="nav__link active">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="#services" class="nav__link">Услуги</a>
-          </li>
-          <li class="nav__item">
-            <a href="#tarifs" class="nav__link">Тарифы</a>
-          </li>
-          <li class="nav__item">
-            <a href="#advantages" class="nav__link">Почему мы</a>
-          </li>
-          <li class="nav__item">
-            <a href="#feedbacks" class="nav__link">Отзывы</a>
-          </li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">RDG Lex</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contacts" class="nav__link">Контакты</a>
-          </li>
-        </ul>
-        <div class="side__bottom">
-          <a href="#" class="text-gold" data-feedback>Обратная связь</a>
-        </div>
-        <div class="nav-mobile-burger">
-          <div class="nav-mobile-burger__lines">
-            <img src="./images/icons/lines.svg" alt="lines">
+        <div class="side-mobile__top">
+          <a href="#main" class="logo">
+            <img src="./images/logo.svg" alt="logo">
+          </a>
+          <ul class="nav">
+            <li class="nav__item">
+              <a href="#main" class="nav__link active">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">Услуги</a>
+            </li>
+            <li class="nav__item">
+              <a href="#tarifs" class="nav__link">Тарифы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#advantages" class="nav__link">Почему мы</a>
+            </li>
+            <!-- <li class="nav__item">
+              <a href="#feedbacks" class="nav__link">Отзывы</a>
+            </li> -->
+            <li class="nav__item">
+              <a href="#about" class="nav__link">RDG Lex</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+          <div class="side__bottom">
+            <a href="#" class="text-gold" data-feedback>Обратная связь</a>
           </div>
-          <div class="nav-mobile-burger__arrow">
-            <img src="./images/icons/arrow.svg" alt="arrow">
+          <div class="nav-mobile-burger">
+            <div class="nav-mobile-burger__lines">
+              <img src="./images/icons/lines.svg" alt="lines">
+            </div>
+            <div class="nav-mobile-burger__arrow">
+              <img src="./images/icons/arrow.svg" alt="arrow">
+            </div>
+          </div>
+        </div>
+        <div class="nav-mobile">
+          <ul class="nav-mobile__list">
+            <li class="nav-mobile__item">
+              <a href="#main" class="nav-mobile__link">Главная</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#services" class="nav-mobile__link">Услуги</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#tarifs" class="nav-mobile__link">Тарифы</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#advantages" class="nav-mobile__link">Почему мы</a>
+            </li>
+            <!-- <li class="nav-mobile__item">
+              <a href="#feedbacks" class="nav-mobile__link">Отзывы</a>
+            </li> -->
+            <li class="nav-mobile__item">
+              <a href="#about" class="nav-mobile__link">RDG Lex</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#contacts" class="nav-mobile__link">Контакты</a>
+            </li>
+          </ul>
+          <div class="nav-mobile__bottom">
+            <a href="tel:8 (909) 593 10 90" class="nav-mobile__phone text-sub">
+              8 (909) 593 10 90
+            </a>
+            <a href="#" class="text-gold" data-feedback>Обратная связь</a>
           </div>
         </div>
       </nav>
@@ -64,10 +97,10 @@
             </div>
             <div class="screen-main__main">
               <div class="text-pinyon text-gold">L</div>
-              <div class="sub-h text-gold">Ваши проблемы – наша забота</div>
-              <h1>Юридическая помощь</h1>
+              <div class="sub-h text-gold">Инновационные правовые решения</div>
+              <h1>Юридическое сопровождение Бизнеса</h1>
               <div class="btn__wrapper">
-                <button class="btn btn-gold" type="button">Нужна помощь юриста!</button>
+                <button class="btn btn-gold" type="button">Консультация специалиста</button>
               </div>
             </div>
             <div class="icon-wrapper btn-down">
@@ -83,8 +116,8 @@
             <div class="col">
               <div class="screen-services__request">
                 <div>
-                  <h2>Юридическое обслуживание</h2>
-                  <div class="text-sub">Без фиксированной оплаты</div>
+                  <h2>Представление интересов компаний в России и за рубежом</h2>
+                  <!-- <div class="text-sub">Без фиксированной оплаты</div> -->
                 </div>
                 <div class="btn__wrapper">
                   <button class="btn btn-regular" type="button">Оставить заявку</button>
@@ -99,8 +132,8 @@
                       <div class="icon-wrapper icon-wrapper--big screen-services-item__header--icon">
                         <img src="./images/icons/services-1.svg" alt="services-1">
                       </div>
-                      <div class="screen-services-item__header--text">Устные и письменные консультации</div>
-                      <div class="screen-services-item__header--cross"></div>
+                      <div class="screen-services-item__header--text">Создание, ликвидация, банкротство организаций</div>
+                      <!-- <div class="screen-services-item__header--cross"></div> -->
                     </div>
                     <div class="screen-services-item__content">
                       <p>Составление договоров в Москве - это очень важный и ответственный процесс для которого просто необходима помощь профессиональных юристов. Зачем нужны юристы по составлению договоров, когда "рыбу" любого договора можно скачать из интернета и просто поменять в ней реквизиты сторон и дату?</p>
@@ -108,14 +141,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="screen-services-item active">
+                <div class="screen-services-item">
                   <div class="screen-services-item--main">
                     <div class="screen-services-item__header">
                       <div class="icon-wrapper icon-wrapper--big screen-services-item__header--icon">
                         <img src="./images/icons/services-2.svg" alt="services-2">
                       </div>
-                      <div class="screen-services-item__header--text">Составление и проверка договоров</div>
-                      <div class="screen-services-item__header--cross"></div>
+                      <div class="screen-services-item__header--text">Оптимизация юридических процессов компании</div>
+                      <!-- <div class="screen-services-item__header--cross"></div> -->
                     </div>
                     <div class="screen-services-item__content">
                       <p>Составление договоров в Москве - это очень важный и ответственный процесс для которого просто необходима помощь профессиональных юристов. Зачем нужны юристы по составлению договоров, когда "рыбу" любого договора можно скачать из интернета и просто поменять в ней реквизиты сторон и дату?</p>
@@ -129,8 +162,38 @@
                       <div class="icon-wrapper icon-wrapper--big screen-services-item__header--icon">
                         <img src="./images/icons/services-3.svg" alt="services-3">
                       </div>
-                      <div class="screen-services-item__header--text">Регистрационные действия</div>
-                      <div class="screen-services-item__header--cross"></div>
+                      <div class="screen-services-item__header--text">Сопровождение договорной деятельности</div>
+                      <!-- <div class="screen-services-item__header--cross"></div> -->
+                    </div>
+                    <div class="screen-services-item__content">
+                      <p>Составление договоров в Москве - это очень важный и ответственный процесс для которого просто необходима помощь профессиональных юристов. Зачем нужны юристы по составлению договоров, когда "рыбу" любого договора можно скачать из интернета и просто поменять в ней реквизиты сторон и дату?</p>
+                      <button class="btn btn-regular" type="button">Заказать услугу</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-services-item">
+                  <div class="screen-services-item--main">
+                    <div class="screen-services-item__header">
+                      <div class="icon-wrapper icon-wrapper--big screen-services-item__header--icon">
+                        <img src="./images/icons/services-2.svg" alt="services-3">
+                      </div>
+                      <div class="screen-services-item__header--text">Корпоративные споры</div>
+                      <!-- <div class="screen-services-item__header--cross"></div> -->
+                    </div>
+                    <div class="screen-services-item__content">
+                      <p>Составление договоров в Москве - это очень важный и ответственный процесс для которого просто необходима помощь профессиональных юристов. Зачем нужны юристы по составлению договоров, когда "рыбу" любого договора можно скачать из интернета и просто поменять в ней реквизиты сторон и дату?</p>
+                      <button class="btn btn-regular" type="button">Заказать услугу</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="screen-services-item">
+                  <div class="screen-services-item--main">
+                    <div class="screen-services-item__header">
+                      <div class="icon-wrapper icon-wrapper--big screen-services-item__header--icon">
+                        <img src="./images/icons/services-1.svg" alt="services-3">
+                      </div>
+                      <div class="screen-services-item__header--text">Представление интересов в суде кассационной инстанции</div>
+                      <!-- <div class="screen-services-item__header--cross"></div> -->
                     </div>
                     <div class="screen-services-item__content">
                       <p>Составление договоров в Москве - это очень важный и ответственный процесс для которого просто необходима помощь профессиональных юристов. Зачем нужны юристы по составлению договоров, когда "рыбу" любого договора можно скачать из интернета и просто поменять в ней реквизиты сторон и дату?</p>
@@ -159,8 +222,11 @@
                     <img src="./images/icons/arrow-long.svg" alt="arrow-long">
                   </div>
                 </div>
-                <div class="step__text">Выбираете услугу</div>
-                <div class="step__text-sub text-sub">Никаких ограничений по объему услуг</div>
+                <div class="step__text">Консультация</div>
+                <div class="step__text-sub text-sub">Специалист ответит на все интересующие Вас вопросы</div>
+                <div class="step-mobile__arrow">
+                  <img src="./images/icons/arrow-long.svg" alt="arrow-long">
+                </div>
               </div>
               <div class="step">
                 <div class="step__number">
@@ -169,15 +235,18 @@
                     <img src="./images/icons/arrow-long.svg" alt="arrow-long">
                   </div>
                 </div>
-                <div class="step__text">Заключаем договор</div>
-                <div class="step__text-sub text-sub">Вносите комфортный для вас депозит</div>
+                <div class="step__text">Выбираете тариф</div>
+                <div class="step__text-sub text-sub">Индивидуальный подход при согласовании условий договора</div>
+                <div class="step-mobile__arrow">
+                  <img src="./images/icons/arrow-long.svg" alt="arrow-long">
+                </div>
               </div>
               <div class="step">
                 <div class="step__number">
                   <span class="step__number--text text-gold text-number">03</span>
                 </div>
-                <div class="step__text">Без обращений</div>
-                <div class="step__text-sub text-sub">Платить не нужно. Депозит сохраняется</div>
+                <div class="step__text">Заключение договора</div>
+                <div class="step__text-sub text-sub">Заключение договора возможно дистанционно</div>
               </div>
             </div>
           </div>
@@ -212,31 +281,30 @@
               <div class="col tarif__wrapper">
                 <div class="tarif">
                   <div class="tarif__header d-flex align-center">
-                    <h3>Абонентский</h3>
-                    <div class="question">
+                    <h3>Базовый тариф</h3>
+                    <!-- <div class="question">
                       ?
-                    </div>
+                    </div> -->
+                  </div>
+                  <div class="tarif__sub-header text-sub">
+                    Сдельная оплата обращений
+                  </div>
+                  <button class="btn btn-regular" type="button">Выбрать тариф</button>
+                </div>
+              </div>
+              <div class="col tarif__wrapper">
+                <div class="tarif">
+                  <div class="tarif__header d-flex align-center">
+                    <h3>Абонентский</h3>
+                    <!-- <div class="question">
+                      ?
+                    </div> -->
                   </div>
                   <div class="tarif__sub-header text-sub">
                     Полное сопровождение
                   </div>
                   <div class="tarif__cost text-gold">
                     <span class="tarif__cost--numbers">от 60 000 ₽/</span>мес
-                  </div>
-                  <button class="btn btn-regular" type="button">Выбрать тариф</button>
-                </div>
-                
-              </div>
-              <div class="col tarif__wrapper">
-                <div class="tarif">
-                  <div class="tarif__header d-flex align-center">
-                    <h3>Рамочный тариф</h3>
-                    <div class="question">
-                      ?
-                    </div>
-                  </div>
-                  <div class="tarif__sub-header text-sub">
-                    Сдельная оплата обращений
                   </div>
                   <button class="btn btn-regular" type="button">Выбрать тариф</button>
                 </div>
@@ -334,7 +402,7 @@
         </div>
       </section>
 
-      <section class="section screen-feedbacks" id="feedbacks">
+      <!-- <section class="section screen-feedbacks" id="feedbacks">
         <div class="container">
           <div class="screen-feedbacks__container">
             <div class="screen-feedbacks__top d-flex align-center">
@@ -442,7 +510,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section screen-about" id="about">
         <div class="container">
@@ -452,9 +520,15 @@
                 <div class="about__main">
                   <h2>RDG Lex</h2>
                   <p class="about__sub-text text-sub">
-                    У нас работают узконаправленные юристы,
-                    которые помогут с решением задач во всех областях права.
-                    Клиенты полагаются на наш опыт. Мы помогаем им снизить риски для бизнеса и берем на себя решение любых юридических задач.
+                    Юридическая компания RDG Lex – ваш
+                    помощник в установлении отлаженной системы
+                    делегирования полномочий, распределения
+                    ответственности, устойчивой к изменениям
+                    законодательства и отвечающей всем критериям
+                    качества международного уровня. При
+                    сотрудничестве вы получите наш накопленный
+                    опыт и поддержку юристов узкой специализации
+                    из всех отраслей права.
                   </p>
                   <img src="./images/Lex.png" alt="Lex">
                 </div>
@@ -471,7 +545,7 @@
                   </div>
                   <div class="about-item">
                     <div class="about-item__number text-gold text-number">
-                      2500 ₽
+                      5000 ₽
                     </div>
                     <div class="about-item__text">Вы заплатите за консультацию профессионального юриста в рамках «Базового» тарифа</div>
                   </div>
@@ -488,7 +562,7 @@
         </div>
       </section>
 
-      <section class="section screen-team" id="team">
+      <!-- <section class="section screen-team" id="team">
         <div class="container">
           <div class="screen-team__container">
             <div class="screen-team__top d-flex align-center">
@@ -591,7 +665,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section screen-partners" id="partners">
         <div class="container">
@@ -611,28 +685,116 @@
               <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide swiper-item partners-item">
-                    <div class="partners-item__logo">
-                      Google
+                    <div class="partners-item__head text-gold">
+                      ООО «УНР-41»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Строительные и отделочные работы
+                      ИНН 7839056751
                     </div>
                   </div>
                   <div class="swiper-slide swiper-item partners-item">
-                    <div class="partners-item__logo">
-                      <img src="./images/partners/partners-2.png" alt="partners">
+                    <div class="partners-item__head text-gold">
+                      ООО «Бестстрой»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Строительные и отделочные работы
+                      ИНН 7842429499
                     </div>
                   </div>
                   <div class="swiper-slide swiper-item partners-item">
-                    <div class="partners-item__logo">
-                      Apple
+                    <div class="partners-item__head text-gold">
+                      ООО «Строймонтаж»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Разработка проектной документации,
+                      монтаж коммуникаций
+                      ИНН 7802834290
                     </div>
                   </div>
                   <div class="swiper-slide swiper-item partners-item">
-                    <div class="partners-item__logo">
-                      Google
+                    <div class="partners-item__head text-gold">
+                      ООО «Альтернатива»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Поставка запчастей и оборудования
+                      ИНН 7810607967
                     </div>
                   </div>
                   <div class="swiper-slide swiper-item partners-item">
-                    <div class="partners-item__logo">
-                      Google
+                    <div class="partners-item__head text-gold">
+                      ООО «Ломо Лазер»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Обработка и изготовление металлических
+                      изделий
+                      ИНН 7804003942
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-item partners-item">
+                    <div class="partners-item__head text-gold">
+                      ИП Маков Ярослав Валерьевич
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      управление коммерческой
+                      недвижимостью, курсы подготовки к ЕГЭ
+                      ИНН 7811567202
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-item partners-item">
+                    <div class="partners-item__head text-gold">
+                      ООО «Судовые системы»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Поставка запчастей и оборудования
+                      ИНН 7810802598
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-item partners-item">
+                    <div class="partners-item__head text-gold">
+                      ООО «Глесис»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Строительные и отделочные работы
+                      ИНН 7807199387
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-item partners-item">
+                    <div class="partners-item__head text-gold">
+                      ООО «Смена»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Аренда и эксплуатация спортивных
+                      сооружений
+                      ИНН 7814692829
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-item partners-item">
+                    <div class="partners-item__head text-gold">
+                      ООО «СМАРТ ИНОВАЦИИ»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Управление недвижимостью
+                      ИНН 7841087130
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-item partners-item">
+                    <div class="partners-item__head text-gold">
+                      ООО «ЮНИКОМ ТЕХНОЛОДЖИ»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Обработка и изготовление металлических
+                      изделий
+                      ИНН 7839081571
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-item partners-item">
+                    <div class="partners-item__head text-gold">
+                      ООО «Доминант»
+                    </div>
+                    <div class="partners-item__description text-sub">
+                      Грузоперевозки
+                      ИНН 7811567202
                     </div>
                   </div>
                     
@@ -663,7 +825,7 @@
               <div class="col footer__item">
                 <div class="footer__text">Санкт-Петербург</div>
                 
-                <div class="text-sub">Московский проспект, 91 БЦ «Маяк», оф. 337</div>
+                <div class="text-sub">БЦ «Искра» ул. 1-я советская, д. 6, к. 2, офис 217</div>
               </div>
               <div class="col footer__item">
                 <a href="mailto: inform@rdglex.ru" class="text-gold">inform@rdglex.ru</a>
