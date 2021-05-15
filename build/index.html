@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="libs/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="libs/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="styles/app.min.css">
     <title>RDGLex</title>
   </head>
@@ -38,7 +39,7 @@
             </li>
           </ul>
           <div class="side__bottom">
-            <a href="#" class="text-gold" data-feedback>Обратная связь</a>
+            <a href="#" class="text-gold" data-callback>Обратная связь</a>
           </div>
           <div class="nav-mobile-burger">
             <div class="nav-mobile-burger__lines">
@@ -77,7 +78,7 @@
             <a href="tel:8 (909) 593 10 90" class="nav-mobile__phone text-sub">
               8 (909) 593 10 90
             </a>
-            <a href="#" class="text-gold" data-feedback>Обратная связь</a>
+            <a href="#" class="text-gold" data-callback>Обратная связь</a>
           </div>
         </div>
       </nav>
@@ -100,7 +101,7 @@
               <div class="sub-h text-gold">Инновационные правовые решения</div>
               <h1>Юридическое сопровождение Бизнеса</h1>
               <div class="btn__wrapper">
-                <button class="btn btn-gold" type="button">Консультация специалиста</button>
+                <button class="btn btn-gold" type="button" data-consult>Консультация специалиста</button>
               </div>
             </div>
             <div class="icon-wrapper btn-down">
@@ -264,7 +265,7 @@
                 </h2>
               </div>
               <div class="col specialist--mobile">
-                <div class="d-flex align-center specialist">
+                <div class="d-flex align-center specialist" data-consult>
                   <div class="specialist__img d-flex align-center justify-center">
                     <img src="./images/tarifs/specialist.png" alt="specialist">
                   </div>
@@ -395,7 +396,7 @@
               <div class="sub-h text-gold">Перезвоним через 5 минут</div>
               <div class="h1">Консультация специалиста</div>
               <div class="btn__wrapper">
-                <button class="btn btn-gold" type="button">Оставить заявку</button>
+                <button class="btn btn-gold" type="button" data-consult>Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -844,8 +845,86 @@
         </div>
       </footer>
     </div>
+
+
+    <div class="modal modal-callback" id="modal-callback" style="display: none">
+      <div class="modal-wrapper">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h3><span class="text-gold">Обратная</span> связь</h3>
+            <div class="text-sub">Перезвоним через 5 минут</div>
+            <a href="mailto: inform@rdglex.ru" class="email text-gold">inform@rdglex.ru</a>
+            <img src="images/modals/logo-bg.svg" alt="RDGLex-logo-bg" class="modal-header-logo"/>
+          </div>
+        </div>
+        <form class="modal-form">
+          <div class="form-input">
+            <input type="text" placeholder="Ваше имя" name="name" data-mask="letters" />
+          </div>
+
+          <div class="form-input">
+            <input type="tel" placeholder="+7 (___) ___-__-__" name="tel" data-mask="tel" />
+          </div>
+
+          <div class="form-input">
+            <textarea placeholder="Опишите проблему..." name="description"></textarea>
+          </div>
+
+          <div class="form-input agreement">
+            Нажимая на кнопку «Отправить» вы даете согласие на <a href="#">обработку персональных данных</a>
+          </div>
+          
+          <button class="btn btn-gold" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="modal-close">
+        <div class="modal-close__btn">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-consult" id="modal-consult" style="display: none">
+      <div class="modal-wrapper">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h3><span class="text-gold">Консультация</span> специалиста</h3>
+            <div class="text-sub">Перезвоним через 5 минут, расскажем как нужно действовать</div>
+            <a href="mailto: inform@rdglex.ru" class="email text-gold">inform@rdglex.ru</a>
+            <img src="images/modals/logo-bg.svg" alt="RDGLex-logo-bg" class="modal-header-logo"/>
+          </div>
+        </div>
+        <form class="modal-form">
+          <div class="form-input">
+            <input type="text" placeholder="Ваше имя" name="name" data-mask="letters" />
+          </div>
+
+          <div class="form-input">
+            <input type="tel" placeholder="+7 (___) ___-__-__" name="tel" data-mask="tel" />
+          </div>
+
+          <div class="form-input">
+            <textarea placeholder="Вопрос..." name="description"></textarea>
+          </div>
+
+          <div class="form-input agreement">
+            Нажимая на кнопку «Отправить» вы даете согласие на <a href="#">обработку персональных данных</a>
+          </div>
+          
+          <button class="btn btn-gold" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="modal-close">
+        <div class="modal-close__btn">
+
+        </div>
+      </div>
+    </div>
     
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script src="libs/jquery.fancybox.min.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/inputmask.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkB9OwexEKh5lsRMBZyx6PqvJ6z-_RtY0"></script>
     <script src="scripts/main.js" type="module"></script>
   </body>

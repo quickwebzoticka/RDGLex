@@ -1,5 +1,6 @@
 import mapInit from './map.js'
 import swiperInit from './swipers.js'
+import modalsInit from './modals.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   const arrowBottom = document.querySelector('.btn-down')
@@ -110,4 +111,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mapInit()
   swiperInit()
+  modalsInit()
 })

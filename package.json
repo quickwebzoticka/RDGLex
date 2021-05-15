@@ -20,5 +20,9 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "jquery": "^3.6.0"
+  }
 }
