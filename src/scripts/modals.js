@@ -45,6 +45,9 @@ const modalsInit = () => {
   const openSuccessModal = () => {
     $.fancybox.close()
     openModal(modalSuccess)
+    setTimeout(() => {
+      closeModal(modalSuccess)
+    }, 3000)
   }
 
   const initModal = (id) => {
@@ -113,12 +116,6 @@ const modalsInit = () => {
     }
   })
    
-  initModal('callback')
-  initModal('consult')
-  initModal('service')
-
-
-
   const initRateModal = (id) => {
     const btns = document.querySelectorAll(`[data-${id}]`)
     const modal = document.querySelector(`#modal-${id}`)
@@ -139,10 +136,13 @@ const modalsInit = () => {
     })
   }
 
+  initModal('callback')
+  initModal('consult')
+  initModal('service')
+  initModal('rate')
+
   initRateModal('rate-base')
   initRateModal('rate-full')
-
-
 }
 
 export default modalsInit

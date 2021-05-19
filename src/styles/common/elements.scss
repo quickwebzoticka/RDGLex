@@ -234,7 +234,8 @@ h3 {
   &.sending {
     pointer-events: none;
     cursor: not-allowed;
-    opacity: 0.7;
+    background-color: $btn-sending-background;
+    color: $btn-sending-color;
   }
 }
 

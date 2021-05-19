@@ -2,4 +2,13 @@
   background: transparent;
   overflow: hidden;
   padding: 0;
+  @include w768 {
+    overflow: auto;
+  }
+}
+
+.fancybox-slide--html {
+  @include w768 {
+    padding: 0;
+  }
 }
