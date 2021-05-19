@@ -1,0 +1,56 @@
+.SumoSelect {
+  width: 100%;
+
+  & > .CaptionCont {
+    border: 1px solid #E2E8F4;
+    height: 60px;
+    padding: 20px 30px;
+    color: $input-color;
+    background-color: #fff;
+    margin: 0;
+  }
+
+  &.open > .optWrapper {
+    top: 100%;
+  }
+
+  &.open > .CaptionCont, &:focus > .CaptionCont, &:hover > .CaptionCont {
+    box-shadow: none;
+    border-color: $gold;
+    border-radius: 0px;
+  }
+
+  & > .optWrapper {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+
+    & > .options {
+      border-radius: 0px;
+      max-height: 250px;
+      border: none;
+  
+      & > li.opt {
+        border-bottom: 1px solid #E2E8F4;
+        border-left: 1px solid #E2E8F4;
+        border-right: 1px solid #E2E8F4;
+        padding: 20px 30px;
+        height: 60px;
+
+        color: $input-color;
+
+        &:hover {
+          background-color: inherit;
+          color: $gold;
+        }
+  
+        &:first-child {
+          border-radius: 0px;
+          border-top: 1px solid #E2E8F4;
+        }
+      }
+      
+      
+    }
+  } 
+}

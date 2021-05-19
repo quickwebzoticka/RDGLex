@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="libs/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="libs/sumoselect.min.css" />
     <link rel="stylesheet" href="libs/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="styles/app.min.css">
     <title>RDGLex</title>
@@ -121,7 +122,7 @@
                   <!-- <div class="text-sub">Без фиксированной оплаты</div> -->
                 </div>
                 <div class="btn__wrapper">
-                  <button class="btn btn-regular" type="button">Оставить заявку</button>
+                  <button class="btn btn-regular" type="button" data-service>Оставить заявку</button>
                 </div>
               </div>
             </div>
@@ -205,7 +206,7 @@
               </div>
             </div>
             <div class="btn-wrapper--mobile">
-              <button class="btn btn-regular" type="button">Оставить заявку</button>
+              <button class="btn btn-regular" type="button" data-service>Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -290,7 +291,7 @@
                   <div class="tarif__sub-header text-sub">
                     Сдельная оплата обращений
                   </div>
-                  <button class="btn btn-regular" type="button">Выбрать тариф</button>
+                  <button class="btn btn-regular" type="button" data-rate-base>Выбрать тариф</button>
                 </div>
               </div>
               <div class="col tarif__wrapper">
@@ -307,7 +308,7 @@
                   <div class="tarif__cost text-gold">
                     <span class="tarif__cost--numbers">от 60 000 ₽/</span>мес
                   </div>
-                  <button class="btn btn-regular" type="button">Выбрать тариф</button>
+                  <button class="btn btn-regular" type="button" data-rate-full>Выбрать тариф</button>
                 </div>
               </div>
             </div>
@@ -381,7 +382,7 @@
               </div>
             </div>
             <div class="screen-advantages__bottom">
-              <button class="btn btn-regular" type="button">Оставить заявку</button>
+              <button class="btn btn-regular" type="button" data-service>Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -915,16 +916,174 @@
         </form>
       </div>
       <div class="modal-close">
-        <div class="modal-close__btn">
+        <div class="modal-close__btn"></div>
+      </div>
+    </div>
 
+    <div class="modal modal-service" id="modal-service" style="display: none">
+      <div class="modal-wrapper">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h3><span class="text-gold">Заявка</span> на услугу</h3>
+            <div class="text-sub">Перезвоним через 5 минут для уточнения заявки</div>
+            <a href="mailto: inform@rdglex.ru" class="email text-gold">inform@rdglex.ru</a>
+            <img src="images/modals/logo-bg.svg" alt="RDGLex-logo-bg" class="modal-header-logo"/>
+          </div>
+        </div>
+        <form class="modal-form">
+          <div class="form-input">
+            <input type="text" placeholder="Ваше имя" name="name" data-mask="letters" />
+          </div>
+
+          <div class="form-input">
+            <input type="tel" placeholder="+7 (___) ___-__-__" name="tel" data-mask="tel" />
+          </div>
+
+          <div class="form-input">
+            <select name="service" placeholder="Выберите услугу">
+              <option>Создание, ликвидация, банкротство организаций</option>
+              <option>Оптимизация юридических процессов компании</option>
+              <option>Сопровождение договорной деятельности</option>
+              <option>Корпоративные споры</option>
+              <option>Представление интересов в суде кассационной инстанции</option>
+            </select>
+          </div>
+
+          <div class="form-input agreement">
+            Нажимая на кнопку «Отправить» вы даете согласие на <a href="#">обработку персональных данных</a>
+          </div>
+          
+          <button class="btn btn-gold" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="modal-close">
+        <div class="modal-close__btn"></div>
+      </div>
+    </div>
+
+    <div class="modal modal-rate-base" id="modal-rate-base" style="display: none">
+      <div class="modal-wrapper">
+        <div class="modal-table">
+          <div class="modal-table__header">
+            <h3>Тариф <span class="text-gold">«Базовый»</span></h3>
+          </div>
+          <table class="modal-table__content">
+            <tr>
+              <td class="table__text">Разовая консультация с юристом и план действий по вашему вопросу</td>
+              <td class="table__price">5 000 ₽</td>
+            </tr>
+            <tr>
+              <td class="table__text">Разработка и корректировка локального нормативного акта</td>
+              <td class="table__price">5 000 ₽</td>
+            </tr>
+            <tr>
+              <td class="table__text">Взыскание задолженностей с контрагентов в досудебном порядке</td>
+              <td class="table__price">30 000 ₽</td>
+            </tr>
+            <tr>
+              <td class="table__text">Взыскание задолженностей с контрагентов в судебном порядке</td>
+              <td class="table__price">от 60 000 ₽</td>
+            </tr>
+            <tr>
+              <td class="table__text">Представление интересов в государственных органах с подготовкой необходимых документов</td>
+              <td class="table__price">25 000 ₽</td>
+            </tr>
+            <tr>
+              <td class="table__text">Разработка или корректировка договора в зависимости от сложности</td>
+              <td class="table__price">от 10 000 ₽</td>
+            </tr>
+            <tr>
+              <td class="table__text">Сопровождение любых переговоров</td>
+              <td class="table__price">20 000 ₽</td>
+            </tr>
+          </table>
+          <div class="modal-table__bottom">
+            <button class="btn btn-gold" type="submit" data-choose-rate="rate-base">Выбрать</button>
+          </div>
+        </div>
+        <div class="modal-close">
+          <div class="modal-close__btn"></div>
         </div>
       </div>
     </div>
-    
+
+    <div class="modal modal-rate-full" id="modal-rate-full" style="display: none">
+      <div class="modal-wrapper">
+        <div class="modal-table">
+          <div class="modal-table__header">
+            <h3>Тариф <span class="text-gold">«Абонентский»</span></h3>
+          </div>
+
+          <div class="modal-table__content">
+            Тариф с абонентской платой в размере <span class="text-gold">60 000 ₽</span>. Количество часов
+            юридического обслуживания организации не ограничено. Представление
+            интересов организации в судах не включены в стоимость.
+          </div>
+
+          <div class="modal-table__bottom">
+            <button class="btn btn-gold" type="submit" data-choose-rate="rate-full">Выбрать</button>
+          </div>
+        </div>
+        <div class="modal-close">
+          <div class="modal-close__btn"></div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="modal modal-rate" id="modal-rate" style="display: none">
+      <div class="modal-wrapper">
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h3><span class="text-gold">Выбор</span> тарифа</h3>
+            <div class="text-sub">Перезвоним через 5 минут для составления договора</div>
+            <a href="mailto: inform@rdglex.ru" class="email text-gold">inform@rdglex.ru</a>
+            <img src="images/modals/logo-bg.svg" alt="RDGLex-logo-bg" class="modal-header-logo"/>
+          </div>
+        </div>
+        <form class="modal-form">
+          <div class="form-input">
+            <input type="text" placeholder="Ваше имя" name="name" data-mask="letters" />
+          </div>
+
+          <div class="form-input">
+            <input type="tel" placeholder="+7 (___) ___-__-__" name="tel" data-mask="tel" />
+          </div>
+
+          <div class="form-input">
+            <select name="rate" placeholder="Выберите тариф">
+              <option value="rate-full">Тариф «Абонентский»</option>
+              <option value="rate-base">«Базовый» тариф</option>
+            </select>
+          </div>
+
+          <div class="form-input agreement">
+            Нажимая на кнопку «Отправить» вы даете согласие на <a href="#">обработку персональных данных</a>
+          </div>
+          
+          <button class="btn btn-gold" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="modal-close">
+        <div class="modal-close__btn"></div>
+      </div>
+    </div>
+
+    <div class="modal modal-success" id="modal-success" style="display: none">
+      <h3 class="text-gold">Заявка отправлена</h3>
+      <div class="text-sub">В ближайшее время мы свяжемся с <span class="text-gold">Вами</span></div>
+      <svg id="successAnimation" class="animated" xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 70 70">
+        <path id="successAnimationResult" fill="#D8D8D8" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
+        <circle id="successAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2" stroke-linecap="round" fill="transparent"/>
+        <polyline id="successAnimationCheck" stroke="#979797" stroke-width="2" points="23 34 34 43 47 27" fill="transparent"/>
+      </svg>
+    </div>
+
     <script src="libs/jquery.js"></script>
     <script src="libs/jquery.fancybox.min.js"></script>
     <script src="libs/swiper/swiper.min.js"></script>
     <script src="libs/inputmask.min.js"></script>
+    <script src="libs/jquery.sumoselect.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkB9OwexEKh5lsRMBZyx6PqvJ6z-_RtY0"></script>
     <script src="scripts/main.js" type="module"></script>
   </body>
