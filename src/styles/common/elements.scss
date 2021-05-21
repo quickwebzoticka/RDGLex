@@ -289,14 +289,14 @@ h3 {
 }
 
 .tag {
-  padding: 10px 25px;
+  padding: 10px 15px;
   border-radius: 30px;
   color: $gold;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid $white-low;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 400;
 
   @include w1440 {

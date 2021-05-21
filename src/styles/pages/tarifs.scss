@@ -48,8 +48,6 @@
       
 
       &__img {
-        border: 1px solid $white-low;
-        border-radius: 50%;
         width: 100px;
         height: 100px;
         flex: 0 1 100px;
@@ -67,6 +65,7 @@
         img {
           border-radius: 50%;
           max-width: 100%;
+          width: 100%;
         }
       }
 

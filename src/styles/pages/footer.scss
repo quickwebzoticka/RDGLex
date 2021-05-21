@@ -77,3 +77,33 @@
     }
   }
 }
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
+  &__item {
+    width: 48px;
+    height: 48px;
+    border: 1px solid $white-low;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    transition: .3s;
+
+    &:hover {
+      border-color: $gold;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    img {
+      width: 70%;
+    }
+  }
+}

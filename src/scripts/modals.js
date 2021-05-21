@@ -1,3 +1,5 @@
+import ApiSend from './ApiSend.js'
+
 const modalsInit = () => {
   const modalCloseBtns = document.querySelectorAll('.modal-close__btn')
   const modalRate = document.querySelector('#modal-rate')
@@ -91,10 +93,11 @@ const modalsInit = () => {
           })
         }
     
-        const response = await test()
+        const response = await ApiSend(data)
+        console.log(response)
+
         openSuccessModal()
     
-        console.log(response)
       }
       toggleDisableUI(modal, false)
     })
